@@ -5,6 +5,13 @@
     <title>To-do list app</title>
 </head>
 <body>
-  <h1>To-do list application</h1>
+    <h1>To-do list application</h1>
+    <div>
+        <th:block th:each="task: ${tasks}">
+            <div>
+                <span th:text="${task.title}">Task Title</span>
+            </div>
+        </th:block>
+    </div>
 </body>
 </html>

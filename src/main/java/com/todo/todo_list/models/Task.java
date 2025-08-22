@@ -8,11 +8,17 @@ import lombok.Data;
 
 //this class will be translated into a table in the database later
 @Entity
-@Data
+//@Data
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
     private boolean completed;
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public Task() {}
 }

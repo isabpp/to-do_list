@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping("/tasks")
+//@RequestMapping("/tasks")
 public class TaskController {
 
     private final TaskService taskService;
