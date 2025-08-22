@@ -8,7 +8,7 @@ import lombok.Data;
 
 //this class will be translated into a table in the database later
 @Entity
-//@Data
+@Data
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,9 +16,9 @@ public class Task {
     private String title;
     private boolean completed;
 
-    public String getTitle() {
-        return this.title;
-    }
+    //public String getTitle() {
+        //return this.title;
+    //}
 
-    public Task() {}
+    //public Task() {}
 }
