@@ -5,6 +5,7 @@ import com.todo.todo_list.models.Task;
 import com.todo.todo_list.services.TaskService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -31,4 +32,11 @@ public class TaskController {
         taskService.createTask(title);
         return "redirect:/";
     }
+
+    @GetMapping("/{id}/delete")
+    public String deleteTask(@PathVariable Long id) {
+        taskService.deleteTask(id);
+        return "redirect:/";
+    }
+
 }
