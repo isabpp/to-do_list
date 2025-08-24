@@ -19,6 +19,9 @@
         <th:block th:each="task: ${tasks}">
             <div>
                 <span th:text="${task.title}">Task Title</span>
+                <div>
+                    <a th:href="@{/{id}/toggle(id=${task.id})}" class="">Mark completed</a>
+                </div>
             </div>
         </th:block>
     </div>
