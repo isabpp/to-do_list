@@ -39,4 +39,9 @@ public class TaskController {
         return "redirect:/";
     }
 
+    public String toggleTask(@PathVariable Long id) {
+        taskService.toggleTask(id);
+        return "redirect:/";
+    }
+
 }
