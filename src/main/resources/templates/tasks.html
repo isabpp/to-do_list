@@ -18,7 +18,7 @@
         </form>
         <th:block th:each="task: ${tasks}">
             <div>
-                <span th:text="${task.title}">Task Title</span>
+                <span th:classappend="${task.completed} ? 'text-success'" th:text="${task.title}">Task Title</span>
                 <div>
                     <a th:href="@{/{id}/toggle(id=${task.id})}" class="">Mark completed</a>
                 </div>
