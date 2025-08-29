@@ -20,7 +20,8 @@
             <div>
                 <span th:classappend="${task.completed} ? 'text-success'" th:text="${task.title}">Task Title</span>
                 <div>
-                    <a th:href="@{/{id}/toggle(id=${task.id})}" class="">Mark completed</a>
+                    <a th:href="@{/{id}/toggle(id=${task.id})}" class="btn btn-outline-success">Mark done</a>
+                    <a th:href="@{/{id}/delete(id=${task.id})}" class="btn btn-outline-danger">Delete</a>
                 </div>
             </div>
         </th:block>
