@@ -18,7 +18,7 @@
             </div>
         </form>
         <th:block th:each="task: ${tasks}">
-            <div class="card my-2">
+            <div class="card my-2 bg-secondary bg-opacity-75 text-white">
                 <div class="card-body d-flex flex-row justify-content-between">
                     <span th:classappend="${task.completed} ? 'text-success'" th:text="${task.title}">Task Title</span>
                     <div>
