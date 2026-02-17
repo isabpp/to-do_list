@@ -17,8 +17,8 @@
                 <button type="submit" class="btn btn-outline-primary">Add</button>
             </div>
         </form>
-        <div class="task-sug container">
-            <div class="tasks-container">
+        <div class="task-sug container-fluid d-flex flex-row pt-2">
+            <div class="tasks-container w-50 p-2">
                 <th:block th:each="task: ${tasks}">
                     <div class="card my-2 bg-secondary bg-opacity-75 text-white">
                         <div class="card-body d-flex flex-row justify-content-between">
@@ -32,7 +32,7 @@
                     </div>
                 </th:block>
             </div>
-            <div class="ai-container card">
+            <div class="ai-container card w-50 p-2">
                 <div class="card-header">Google AI suggestion</div>
                 <div class="card-body">
                     <p>Text goes here....</p>
