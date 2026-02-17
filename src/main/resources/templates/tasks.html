@@ -17,18 +17,29 @@
                 <button type="submit" class="btn btn-outline-primary">Add</button>
             </div>
         </form>
-        <th:block th:each="task: ${tasks}">
-            <div class="card my-2 bg-secondary bg-opacity-75 text-white">
-                <div class="card-body d-flex flex-row justify-content-between">
-                    <span th:classappend="${task.completed} ? 'text-success'" th:text="${task.title}">Task Title</span>
-                    <div>
-                        <a th:href="@{/{id}/toggle(id=${task.id})}" class="btn btn-outline-success">Mark done</a>
-                        <a th:href="@{/{id}/delete(id=${task.id})}" class="btn btn-outline-danger">Delete</a>
-                        <a class="btn btn-outline-primary">Ask AI</a>
+        <div class="task-sug container">
+            <div class="tasks-container">
+                <th:block th:each="task: ${tasks}">
+                    <div class="card my-2 bg-secondary bg-opacity-75 text-white">
+                        <div class="card-body d-flex flex-row justify-content-between">
+                            <span th:classappend="${task.completed} ? 'text-success'" th:text="${task.title}">Task Title</span>
+                            <div>
+                                <a th:href="@{/{id}/toggle(id=${task.id})}" class="btn btn-outline-success">Mark done</a>
+                                <a th:href="@{/{id}/delete(id=${task.id})}" class="btn btn-outline-danger">Delete</a>
+                                <a class="btn btn-outline-primary">Ask AI</a>
+                            </div>
+                        </div>
                     </div>
+                </th:block>
+            </div>
+            <div class="ai-container card">
+                <div class="card-header">Google AI suggestion</div>
+                <div class="card-body">
+                    <p>Text goes here....</p>
                 </div>
             </div>
-        </th:block>
+        </div>
+
     </div>
 </body>
 </html>
