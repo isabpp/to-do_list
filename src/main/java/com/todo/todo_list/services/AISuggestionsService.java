@@ -17,7 +17,7 @@ public class AISuggestionsService {
     public String generateSuggestion(String task) {
         GenerateContentResponse response = client.models.generateContent(
                 "gemini-3-flash-preview",
-                "Provide a suggestion for: " + task,
+                "Provide a suggestion for how to solve or deal with this task: " + task,
                 null
         );
         return response.text();
