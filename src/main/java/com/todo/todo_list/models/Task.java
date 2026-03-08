@@ -16,9 +16,4 @@ public class Task {
     private String title;
     private boolean completed;
 
-    //public String getTitle() {
-        //return this.title;
-    //}
-
-    //public Task() {}
 }
