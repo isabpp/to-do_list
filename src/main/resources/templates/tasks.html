@@ -46,6 +46,8 @@
     function generateSuggestion(taskId) {
         const suggestionText = document.getElementById('suggestion-text');
 
+        suggestionText.textContent = 'Generating a suggestion...';
+
         fetch('/' + taskId + '/generate-suggestion')
             .then(response => {
                 if (!response.ok) {
